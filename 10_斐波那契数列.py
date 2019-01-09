@@ -1,4 +1,4 @@
-def fibonacci(n):
+def fibonacci_iter(n):
     """
     题目一 求斐波那契数列的第n项
     时间O(n)
@@ -20,8 +20,19 @@ def fibonacci(n):
     return s
 
 
+def fibonacci_recur(n):
+    if n < 2:
+        return n
+
+    return fibonacci_recur(n - 1) + fibonacci_recur(n - 2)
+
+
 if __name__ == "__main__":
-    print(fibonacci(0))
-    print(fibonacci(1))
-    print(fibonacci(2))
-    print(fibonacci(20))
+    print(fibonacci_iter(0))
+    print(fibonacci_iter(1))
+    print(fibonacci_iter(2))
+    print(fibonacci_iter(20))
+    print(fibonacci_recur(0))
+    print(fibonacci_recur(1))
+    print(fibonacci_recur(2))
+    print(fibonacci_recur(20))
